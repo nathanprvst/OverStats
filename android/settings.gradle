@@ -1,0 +1,3 @@
+rootProject.name = 'overstats'
+
+include ':app'
