@@ -34,35 +34,32 @@ export default class Stats extends React.Component {
         <View style={styles.main_view}>
             {!this.state.loading && (
                 <Grid style={styles.grid}>
-                    <Row>
-                        <Col style={{ width: 65 }}>
-                        <Image
-                          style={{width: 50, height: 50}}
-                          source={{uri: this.state.profile.icon}}
-                        />
-                        </Col>
+                    <Row style={{ height: 115 }}>
                         <Col>
-                            <Text style={styles.name_text}>{this.state.profile.name}</Text>
+                            <Image
+                              style={[{ width: 100, height: 100 }, styles.img_center]}
+                              source={{uri: this.state.profile.icon}}
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Text style={ styles.name_text }>{this.state.profile.name}</Text>
                             <Row style={{ height: 35 }}>
                                 <Col>
-                                    <Image
-                                      style={{width: 30, height: 30}}
-                                      source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                                    />
+                                    <Text style={[styles.text_center, styles.secondary_text]}>Level</Text>
+                                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.level}</Text>
+                                </Col>
+                                <Col>
+                                    <Text style={[styles.text_center, styles.secondary_text]}>Prestige</Text>
+                                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.prestige}</Text>
                                 </Col>
                                 <Col>
                                     <Image
-                                      style={{width: 30, height: 30}}
-                                      source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+                                      style={[{ width: 50, height: 50 }, styles.img_center]}
+                                      source={{uri: this.state.profile.ratingIcon}}
                                     />
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Text>1290</Text>
-                                </Col>
-                                <Col>
-                                    <Text>456</Text>
+                                    <Text style={[styles.text_white, styles.text_center]}>{this.state.profile.rating}</Text>
                                 </Col>
                             </Row>
                         </Col>
@@ -93,5 +90,24 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       fontSize: 20,
       marginBottom: 15,
+      textAlign: 'center',
   },
+  secondary_text: {
+    fontSize: 16,
+    color: '#DFAA35',
+    marginTop: 16,
+  },
+  text_white: {
+    color: '#FFF',
+  },
+  text_center: {
+    textAlign: 'center',
+  },
+  img_center: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  text: {
+      marginTop: 15,
+  }
 });
