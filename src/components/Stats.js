@@ -1,50 +1,68 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 import BackgroundImage from '../fragments/BackgroundImage';
 
+import * as Api from '../services/api';
+
 export default class Stats extends React.Component {
+
+  static get defaultProps() {
+    return {
+      username: '',
+    }
+  }
+
+  state = {
+    profile: null,
+  }
+
+  async componentDidMount() {
+    let profile = await Api.getProfile(this.props.username);
+    this.setState({ profile: profile });
+  }
 
   render() {
     return (
       <BackgroundImage>
+        <StatusBar barStyle="light-content" />
         <View style={styles.main_view}>
-        <Grid style={styles.grid}>
-            <Row>
-                <Col style={{ width: 125 }}>
-                <Image
-                  style={{width: 110, height: 110}}
-                  source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                />
-                </Col>
-                <Col>
-                    <Text style={styles.name_text}>{this.props.username}</Text>
-                    <Row style={{ height: 35 }}>
-                        <Col>
-                            <Image
-                              style={{width: 30, height: 30}}
-                              source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                            />
-                        </Col>
-                        <Col>
-                            <Image
-                              style={{width: 30, height: 30}}
-                              source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                            />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <Text>1290</Text>
-                        </Col>
-                        <Col>
-                            <Text>456</Text>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
-        </Grid>
+            <Grid style={styles.grid}>
+                <Row>
+                    <Col style={{ width: 125 }}>
+                    <Image
+                      style={{width: 110, height: 110}}
+                      source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+                    />
+                    </Col>
+                    <Col>
+                        <Text style={styles.name_text}>{this.props.username}</Text>
+                        <Row style={{ height: 35 }}>
+                            <Col>
+                                <Image
+                                  style={{width: 30, height: 30}}
+                                  source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+                                />
+                            </Col>
+                            <Col>
+                                <Image
+                                  style={{width: 30, height: 30}}
+                                  source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+                                />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <Text>1290</Text>
+                            </Col>
+                            <Col>
+                                <Text>456</Text>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </Grid>
         </View>
       </BackgroundImage>
     );
