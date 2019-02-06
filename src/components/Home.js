@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StatusBar, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Formik } from 'formik';
 
@@ -21,6 +21,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <BackgroundImage>
+        <StatusBar barStyle="light-content" />
         <View style={styles.main_view}>
           <Text style={styles.form}>
               <Text style={styles.main_text}>
