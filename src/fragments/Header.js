@@ -1,17 +1,13 @@
 import React from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 
-export default class Header extends React.Component{
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>
-            <Text style={styles.title1}>Over</Text>
-            <Text style={styles.title2}>Stats</Text>
-        </Text>
-      </View>
-    );
-  }
+const Header = ({ icon }) => {
+  return (
+      <Text>
+        <Text style={styles.title1}>Over</Text>
+        <Text style={styles.title2}>Stats</Text>
+      </Text>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -31,3 +27,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+export default Header;

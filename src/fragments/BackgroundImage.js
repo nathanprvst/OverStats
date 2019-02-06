@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, ImageBackground, View } from 'react-native';
+import { StyleSheet, ImageBackground } from 'react-native';
 
 export default class BackgroundImage extends Component {
 
