@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View, StatusBar, Button, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Formik } from 'formik';
 
@@ -21,7 +21,6 @@ export default class Home extends React.Component {
   render() {
     return (
       <BackgroundImage>
-        <StatusBar barStyle='light-content' />
         <View style={styles.main_view}>
           <Text style={styles.form}>
               <Text style={styles.main_text}>
@@ -29,7 +28,7 @@ export default class Home extends React.Component {
               </Text>
               <Text style={styles.second_text}> Overwatch </Text>
               <Text style={styles.main_text}>
-                pour voir ses statistiques. Remplisser son pseudo dans le champ ci-dessous :
+                pour voir ses statistiques. Remplissez son pseudo dans le champ ci-dessous :
               </Text>
           </Text>
           <Formik
@@ -56,7 +55,6 @@ export default class Home extends React.Component {
             )}
           </Formik>
         </View>
-
       </BackgroundImage>
     );
   }
