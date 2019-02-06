@@ -6,6 +6,18 @@ import { Formik } from 'formik';
 import BackgroundImage from '../fragments/BackgroundImage';
 
 export default class Home extends React.Component {
+  constructor(){
+      super()
+      this.state = {
+          username : ''
+      }
+      this.handleChangeUsername = this.handleChangeUsername.bind(this);
+  }
+
+  handleChangeUsername(text) {
+    this.setState({ username: text })
+  }
+
   render() {
     return (
       <BackgroundImage>
@@ -21,22 +33,22 @@ export default class Home extends React.Component {
               </Text>
           </Text>
           <Formik
-            initialValues={{ email: '' }}
+            initialValues={{ username: '' }}
             onSubmit={values => console.log(values)}
           >
             {props => (
               <View>
                 <TextInput
-                  onChangeText={props.handleChange('email')}
-                  onBlur={props.handleBlur('email')}
-                  value={props.values.email}
+                  onChangeText={this.handleChangeUsername}
+                  value={this.state.username}
                   style={styles.input}
                   placeholder="Nom d'utilisateur..."
+                  autoCorrect={false}
                 />
                 <TouchableOpacity
-                    onPress={() => Actions.stats()}
-                    title="Submit"
-                    style={styles.submit}
+                  onPress={() => Actions.stats({username: this.state.username})}
+                  title="Submit"
+                  style={styles.submit}
                 >
                     <Text style={styles.submitText}>Rechercher</Text>
                 </TouchableOpacity>
