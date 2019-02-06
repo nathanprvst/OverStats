@@ -5,6 +5,7 @@ import { Actions } from 'react-native-router-flux';
 import BackgroundImage from '../fragments/BackgroundImage';
 
 export default class Stats extends React.Component {
+
   render() {
     return (
       <BackgroundImage>
@@ -14,6 +15,9 @@ export default class Stats extends React.Component {
               title="Accueil"
               onPress={() => Actions.home()}
             />
+            <Text>
+                {this.props.username}
+            </Text>
         </View>
       </BackgroundImage>
     );
