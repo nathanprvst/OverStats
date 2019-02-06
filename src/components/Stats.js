@@ -45,7 +45,14 @@ export default class Stats extends React.Component {
                     <Row>
                         <Col>
                             <Text style={ styles.name_text }>{this.state.profile.name}</Text>
-                            <Row style={{ height: 35 }}>
+                            <Row style={{ padding: 5, height: 90, backgroundColor: '#1f1e1e', marginLeft: -15, marginRight: -15 }}>
+                                <Col>
+                                    <Image
+                                      style={[{ width: 50, height: 50 }, styles.img_center]}
+                                      source={{uri: this.state.profile.ratingIcon}}
+                                    />
+                                    <Text style={[styles.text_white, styles.text_center]}>{this.state.profile.rating}</Text>
+                                </Col>
                                 <Col>
                                     <Text style={[styles.text_center, styles.secondary_text]}>Level</Text>
                                     <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.level}</Text>
@@ -53,13 +60,6 @@ export default class Stats extends React.Component {
                                 <Col>
                                     <Text style={[styles.text_center, styles.secondary_text]}>Prestige</Text>
                                     <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.prestige}</Text>
-                                </Col>
-                                <Col>
-                                    <Image
-                                      style={[{ width: 50, height: 50 }, styles.img_center]}
-                                      source={{uri: this.state.profile.ratingIcon}}
-                                    />
-                                    <Text style={[styles.text_white, styles.text_center]}>{this.state.profile.rating}</Text>
                                 </Col>
                             </Row>
                         </Col>
