@@ -16,11 +16,15 @@ export default class Stats extends React.Component {
 
   state = {
     profile: null,
+    loading: true,
   }
 
   async componentDidMount() {
     let profile = await Api.getProfile(this.props.username);
-    this.setState({ profile: profile });
+    this.setState({
+        profile: profile,
+        loading: false
+    });
   }
 
   render() {
@@ -28,41 +32,43 @@ export default class Stats extends React.Component {
       <BackgroundImage>
         <StatusBar barStyle="light-content" />
         <View style={styles.main_view}>
-            <Grid style={styles.grid}>
-                <Row>
-                    <Col style={{ width: 125 }}>
-                    <Image
-                      style={{width: 110, height: 110}}
-                      source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                    />
-                    </Col>
-                    <Col>
-                        <Text style={styles.name_text}>{this.props.username}</Text>
-                        <Row style={{ height: 35 }}>
-                            <Col>
-                                <Image
-                                  style={{width: 30, height: 30}}
-                                  source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                                />
-                            </Col>
-                            <Col>
-                                <Image
-                                  style={{width: 30, height: 30}}
-                                  source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                                />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <Text>1290</Text>
-                            </Col>
-                            <Col>
-                                <Text>456</Text>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </Grid>
+            {!this.state.loading && (
+                <Grid style={styles.grid}>
+                    <Row>
+                        <Col style={{ width: 65 }}>
+                        <Image
+                          style={{width: 50, height: 50}}
+                          source={{uri: this.state.profile.icon}}
+                        />
+                        </Col>
+                        <Col>
+                            <Text style={styles.name_text}>{this.state.profile.name}</Text>
+                            <Row style={{ height: 35 }}>
+                                <Col>
+                                    <Image
+                                      style={{width: 30, height: 30}}
+                                      source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+                                    />
+                                </Col>
+                                <Col>
+                                    <Image
+                                      style={{width: 30, height: 30}}
+                                      source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+                                    />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Text>1290</Text>
+                                </Col>
+                                <Col>
+                                    <Text>456</Text>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Grid>
+            )}
         </View>
       </BackgroundImage>
     );
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
   name_text: {
       color: '#DFAA35',
       fontWeight: 'bold',
-      fontSize: 23,
+      fontSize: 20,
       marginBottom: 15,
   },
 });
