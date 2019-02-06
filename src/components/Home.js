@@ -9,7 +9,7 @@ export default class Home extends React.Component {
   constructor(){
       super()
       this.state = {
-          username : ''
+          username : 'Mahito-21973'
       }
       this.handleChangeUsername = this.handleChangeUsername.bind(this);
   }
