@@ -6,6 +6,7 @@ import FontAwesome, { Icons } from 'react-native-fontawesome';
 import Header from './fragments/Header';
 
 import Home from './components/Home';
+import Overview from './components/Overview';
 import Stats from './components/Stats';
 
 export default class App extends React.Component {
@@ -20,6 +21,14 @@ export default class App extends React.Component {
             navigationBarStyle={styles.nav_bar}
             titleStyle={styles.title}
             initial={true}
+          />
+          <Scene
+            key="overview"
+            component={Overview}
+            renderTitle={Header}
+            navigationBarStyle={styles.nav_bar}
+            backButtonTintColor="#FFF"
+            back
           />
           <Scene
             key="stats"

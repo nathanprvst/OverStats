@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
+import { TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 import BackgroundImage from '../fragments/BackgroundImage';
@@ -10,61 +10,42 @@ export default class Stats extends React.Component {
 
   static get defaultProps() {
     return {
-      username: '',
+      quick: {},
+      competitive: {},
     }
   }
 
   state = {
-    profile: null,
-    loading: true,
+    panel: 0,
   }
 
-  async componentDidMount() {
-    let profile = await Api.getProfile(this.props.username);
-    this.setState({
-        profile: profile,
-        loading: false
-    });
-  }
+  componentDidMount() {}
 
   render() {
+    console.log('quick : ', this.props.quick);
+    console.log('competitive : ', this.props.competitive);
     return (
       <BackgroundImage>
         <StatusBar barStyle="light-content" />
         <View style={styles.main_view}>
             {!this.state.loading && (
-                <Grid style={styles.grid}>
-                    <Row style={{ height: 115 }}>
-                        <Col>
-                            <Image
-                              style={[{ width: 100, height: 100 }, styles.img_center]}
-                              source={{uri: this.state.profile.icon}}
-                            />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <Text style={ styles.name_text }>{this.state.profile.name}</Text>
-                            <Row style={{ padding: 5, height: 90, backgroundColor: '#1f1e1e', marginLeft: -15, marginRight: -15 }}>
-                                <Col>
-                                    <Image
-                                      style={[{ width: 50, height: 50 }, styles.img_center]}
-                                      source={{uri: this.state.profile.ratingIcon}}
-                                    />
-                                    <Text style={[styles.text_white, styles.text_center]}>{this.state.profile.rating}</Text>
-                                </Col>
-                                <Col>
-                                    <Text style={[styles.text_center, styles.secondary_text]}>Level</Text>
-                                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.level}</Text>
-                                </Col>
-                                <Col>
-                                    <Text style={[styles.text_center, styles.secondary_text]}>Prestige</Text>
-                                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.prestige}</Text>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Grid>
+                <React.Fragment>
+                  <Text style={{ color: '#FFF', margin: 20, fontSize: 20 }}>Ranked Mode</Text>
+                  <Row style={{ padding: 5, height: 90, backgroundColor: '#1f1e1e' }}>
+                    <Col>
+                        <Text style={[styles.text_center, styles.secondary_text]}>Jouées</Text>
+                        <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.props.competitive.games.played}</Text>
+                    </Col>
+                    <Col>
+                        <Text style={[styles.text_center, styles.secondary_text]}>Gagnées</Text>
+                        <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.props.competitive.games.won}</Text>
+                    </Col>
+                    <Col>
+                        <Text style={[styles.text_center, styles.secondary_text]}>Win rate</Text>
+                        <Text style={[styles.text_white, styles.text_center, styles.text]}>{Math.round(this.props.competitive.games.won / this.props.competitive.games.played * 100)} %</Text>
+                    </Col>
+                  </Row>
+                </React.Fragment>
             )}
         </View>
       </BackgroundImage>
@@ -109,5 +90,13 @@ const styles = StyleSheet.create({
   },
   text: {
       marginTop: 15,
-  }
+  },
+  submit: {
+    backgroundColor: '#494949',
+    padding: 10,
+    borderRadius: 20,
+    fontSize: 12,
+    marginLeft: 20,
+    marginRight: 20,
+  },
 });

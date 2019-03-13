@@ -46,7 +46,7 @@ export default class Home extends React.Component {
                   autoCorrect={false}
                 />
                 <TouchableOpacity
-                  onPress={() => Actions.stats({username: this.state.username})}
+                  onPress={() => Actions.overview({username: this.state.username})}
                   title="Submit"
                   style={styles.submit}
                 >
