@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StatusBar, StyleSheet, Text, View, Button, Image, Modal } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 import BackgroundImage from '../fragments/BackgroundImage';
@@ -31,6 +31,17 @@ export default class Stats extends React.Component {
     return (
       <BackgroundImage>
         <StatusBar barStyle="light-content" />
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.loading}
+        >
+          <View style={{backgroundColor: '#2A2A2A', height: '100%'}}>
+            <View>
+              <Image source={require('../../assets/loader2.gif')} style={[{ width: 200, height: 200, marginTop: 300 }, styles.img_center]}/>
+            </View>
+          </View>
+        </Modal>
         <View style={styles.main_view}>
             {!this.state.loading && (
                 <Grid style={styles.grid}>
