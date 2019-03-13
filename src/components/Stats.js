@@ -19,7 +19,7 @@ export default class Stats extends React.Component {
     loading: true,
   }
 
-  async componentDidMount() {
+  componentDidMount = async () => {
     let profile = await Api.getProfile(this.props.username);
     this.setState({
         profile: profile,
