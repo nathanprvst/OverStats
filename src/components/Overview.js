@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
+import { Modal, TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
@@ -74,6 +74,19 @@ export default class Overview extends React.Component {
                     </Col>
                   </Row>
                 </React.Fragment>
+            )}
+            {this.state.loading && (
+              <Modal
+                animationType="slide"
+                transparent={false}
+                visible={this.state.loading}
+              >
+                <View style={{backgroundColor: '#2A2A2A', height: '100%'}}>
+                  <View>
+                    <Image source={require('../../assets/loader2.gif')} style={[{ width: 200, height: 200, marginTop: 300 }, styles.img_center]}/>
+                  </View>
+                </View>
+              </Modal>
             )}
         </View>
       </BackgroundImage>
