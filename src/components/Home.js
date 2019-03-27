@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
     height: '100%',
     margin: 20,
     padding: 20,
-    // marginBottom: 0,
   },
   main_text: {
       color: '#FFF',
@@ -93,17 +92,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   submit: {
-    backgroundColor: '#FFF',
-    padding: 15,
+    backgroundColor: '#494949',
+    padding: 10,
     borderRadius: 20,
-    borderWidth: 2,
-    borderColor: '#DFAA35',
-    fontSize: 18,
+    fontSize: 12,
+    marginLeft: 20,
     marginTop: 20,
+    marginRight: 20,
   },
   submitText: {
     textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 20,
+    color: '#FFF',
   },
 });
