@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
+import MaterialTabs from 'react-native-material-tabs';
 
 import BackgroundImage from '../fragments/BackgroundImage';
 
@@ -16,38 +17,89 @@ export default class Stats extends React.Component {
   }
 
   state = {
-    panel: 0,
+    selectedTab: 0,
   }
+
+  setTab = selectedTab => {
+    this.setState({ selectedTab });
+  };
 
   componentDidMount() {}
 
   render() {
     console.log('quick : ', this.props.quick);
     console.log('competitive : ', this.props.competitive);
+    const { selectedTab } = this.state;
+    const data = selectedTab === 0 ? this.props.competitive : this.props.quick;
+
     return (
       <BackgroundImage>
         <StatusBar barStyle="light-content" />
-        <View style={styles.main_view}>
-            {!this.state.loading && (
-                <React.Fragment>
-                  <Text style={{ color: '#FFF', margin: 20, fontSize: 20 }}>Ranked Mode</Text>
-                  <Row style={{ padding: 5, height: 90, backgroundColor: '#1f1e1e' }}>
-                    <Col>
-                        <Text style={[styles.text_center, styles.secondary_text]}>Jouées</Text>
-                        <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.props.competitive.games.played}</Text>
-                    </Col>
-                    <Col>
-                        <Text style={[styles.text_center, styles.secondary_text]}>Gagnées</Text>
-                        <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.props.competitive.games.won}</Text>
-                    </Col>
-                    <Col>
-                        <Text style={[styles.text_center, styles.secondary_text]}>Win rate</Text>
-                        <Text style={[styles.text_white, styles.text_center, styles.text]}>{Math.round(this.props.competitive.games.won / this.props.competitive.games.played * 100)} %</Text>
-                    </Col>
-                  </Row>
-                </React.Fragment>
-            )}
-        </View>
+        <MaterialTabs
+          items={['Ranked', 'Quickplay']}
+          selectedIndex={this.state.selectedTab}
+          onChange={index => this.setState({ selectedTab: index })}
+          barColor="#1f1e1e"
+          indicatorColor="#DFAA35"
+          activeTextColor="white"
+        />
+          <View style={styles.main_view}>
+            <Text style={{ color: '#FFF', margin: 20, fontSize: 20 }}>{selectedTab === 0 ? 'Ranked Games' : 'Quick Games'}</Text>
+            <Row style={{ padding: 5, height: 90, backgroundColor: '#1f1e1e' }}>
+              <Col>
+                  <Text style={[styles.text_center, styles.secondary_text]}>Played</Text>
+                  <Text style={[styles.text_white, styles.text_center, styles.text]}>{data.games.played}</Text>
+              </Col>
+              <Col>
+                  <Text style={[styles.text_center, styles.secondary_text]}>Wons</Text>
+                  <Text style={[styles.text_white, styles.text_center, styles.text]}>{data.games.won}</Text>
+              </Col>
+              <Col>
+                  <Text style={[styles.text_center, styles.secondary_text]}>Win rate</Text>
+                  <Text style={[styles.text_white, styles.text_center, styles.text]}>{Math.round(data.games.won / data.games.played * 100)} %</Text>
+              </Col>
+            </Row>
+            <Row style={{ height: 250 }}>
+              <Col>
+                <Text style={{textAlign: 'center', fontSize: 18, marginTop: 15, color: '#FFF'}}>Awards</Text>
+                <Row style={{marginTop: 10}}>
+                  <Col>
+                    <Text style={{textAlign: 'center', fontSize: 15, marginTop: 15, color: '#DFAA35'}}>Cards</Text>
+                    <Text style={{textAlign: 'center', fontSize: 15, marginTop: 15, color: '#DFAA35'}}>Medals</Text>
+                    <Text style={{textAlign: 'center', fontSize: 13, marginTop: 15, color: '#DFAA35'}}>Golds</Text>
+                    <Text style={{textAlign: 'center', fontSize: 13, marginTop: 15, color: '#DFAA35'}}>Silvers</Text>
+                    <Text style={{textAlign: 'center', fontSize: 13, marginTop: 15, color: '#DFAA35'}}>Bronzes</Text>
+                  </Col>
+                  <Col>
+                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{data.awards.cards}</Text>
+                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{data.awards.medals}</Text>
+                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{data.awards.medalsGold}</Text>
+                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{data.awards.medalsSilver}</Text>
+                    <Text style={[styles.text_white, styles.text_center, styles.text]}>{data.awards.medalsBronze}</Text>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <Image
+                  style={[{ width: '100%', height: '100%' }]}
+                  source={require('../../assets/soldier.jpg')}
+                />
+              </Col>
+            </Row>
+            <Row style={{padding: 10, height: 400, backgroundColor: '#1f1e1e'}}>
+              <Col>
+                  <Text style={[styles.text_white, styles.text_center, {fontSize: 18}]}>Top Heroes</Text>
+                  <TouchableOpacity
+                    onPress={() => Actions.topHeroes({topHeroes: this.props.competitive.topHeroes})}
+                    title="Submit"
+                    style={[styles.submit, {marginTop: 15}]}
+                  >
+                    <Text style={[styles.text_white, styles.text_center]}>Checkout top heroes stats</Text>
+                  </TouchableOpacity>
+                  <Text style={{color: '#FFF', fontSize: 11, textAlign: 'center', marginTop: 5}}>Available for ranked only</Text>
+              </Col>
+            </Row>
+          </View>
       </BackgroundImage>
     );
   }
@@ -83,6 +135,9 @@ const styles = StyleSheet.create({
   },
   text_center: {
     textAlign: 'center',
+  },
+  text_left: {
+    textAlign: 'left',
   },
   img_center: {
     marginLeft: 'auto',
