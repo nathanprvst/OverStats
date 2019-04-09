@@ -3,10 +3,10 @@ import {StyleSheet, Text} from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import AutoHeightImage from 'react-native-auto-height-image';
 
-const Ability = ({ color, data, type, border, showType }) => {
+const Ability = ({ color, heroColor, data, type, border, showType }) => {
   return (
-    <Row style={[border ? styles.containerWithBorder : styles.container, { backgroundColor: color }]}>
-      <Text style={styles.name}>{data.name}</Text>
+    <Row style={[border && { borderTopWidth: 2, borderTopColor: heroColor}, styles.container, { backgroundColor: color }]}>
+      <Text style={[styles.name, { color: heroColor }]}>{data.name}</Text>
       {showType && (<Text style={styles.abilityType}>{type}</Text>)}
       <Row style={{ marginTop: 20}}>
         <Col style={{ flex: 1 }}>
@@ -29,15 +29,8 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingBottom: 30,
   },
-  containerWithBorder: {
-    borderTopColor: '#DFAA35',
-    borderTopWidth: 2,
-    flexDirection: 'column',
-    padding: 20,
-    paddingBottom: 30,
-  },
   name: {
-    color: '#DFAA35',
+    // color: '#DFAA35',
     fontSize: 20,
   },
   abilityType: {
