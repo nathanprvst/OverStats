@@ -77,7 +77,7 @@ export default class TopHeroes extends React.Component {
                   <Row style={{ height: 60, backgroundColor: '#1f1e1e', alignItems: 'center'}}>
                     <Image
                       style={[{ width: 60, height: 60 }]}
-                      source={{uri: `https://d1u1mce87gyfbn.cloudfront.net/hero/${item.name === 'soldier76' ? 'soldier-76' : item.name}/icon-portrait.png`}}
+                      source={{uri: item.icon}}
                     />
                     <View style={{width: this.getHeroPlayedTimeWidth(heroes, item), height: 60, backgroundColor: item.color}}></View>
                     <Text style={[styles.name, {textTransform: 'capitalize', position: 'absolute', left: 70}]}>{item.name}</Text>
