@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Overview from './components/Overview';
 import Stats from './components/Stats';
 import TopHeroes from './components/TopHeroes';
+import HeroInfos from './components/HeroInfos';
 
 export default class App extends React.Component {
   render() {
@@ -22,7 +23,6 @@ export default class App extends React.Component {
             navigationBarStyle={styles.nav_bar}
             titleStyle={styles.title}
             backButtonTintColor="#FFF"
-            initial={true}
           />
           <Scene
             key="overview"
@@ -47,6 +47,15 @@ export default class App extends React.Component {
             navigationBarStyle={styles.nav_bar}
             backButtonTintColor="#FFF"
             back
+          />
+          <Scene
+            key="heroInfos"
+            component={HeroInfos}
+            renderTitle={Header}
+            navigationBarStyle={styles.nav_bar}
+            backButtonTintColor="#FFF"
+            back
+            initial={true}
           />
         </Stack>
       </Router>
