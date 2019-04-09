@@ -30,14 +30,15 @@ export const _heroes = {
     "name": 'dVa',
     "color": '#ED93C7',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/dva/icon-portrait.png',
+    "overview": "Orisa serves as the central anchor of her team, and defends her teammates from the frontline with a protective barrier. She can attack from long range, fortify her own defenses, launch graviton charges to slow and move enemies, and deploy a Supercharger to boost the damage output of multiple allies at once.",
     "weapon": {
       "name": 'Fusion Cannons',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/b/b9/Ability-dva1.png/100px-Ability-dva1.png?version=ac54689044c1ec52b2afcedb2de20e71',
       "text": 'D.Va\'s mech is equipped with twin short-range rotating cannons. They lay down continuous, high-damage fire without needing to reload, but slow D.Va’s movement while they’re active.'
     },
     "passive": {
-      "name": "Eject",
-      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/b/b9/Ability-dva1.png/100px-Ability-dva1.png?version=ac54689044c1ec52b2afcedb2de20e71',
+      "name": "Eject!",
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/b/b0/Ability-passive.png/100px-Ability-passive.png?version=2c09b7d7afa45948f7f0376e65ba7f9c',
       "text": 'Eject out of your mech when it\'s destroyed.'
     },
     "ability1": {
