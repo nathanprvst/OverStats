@@ -36,43 +36,60 @@ export default class Overview extends React.Component {
         <View style={styles.main_view}>
             {!this.state.loading && (
                 <React.Fragment>
-                  <Row style={{ height: 115 }}>
-                      <Col>
-                          <Image
-                            style={[{ width: 100, height: 100 }, styles.img_center]}
-                            source={{uri: this.state.profile.icon}}
-                          />
-                      </Col>
-                  </Row>
-                  <Text style={ styles.name_text }>{this.state.profile.name}</Text>
-                  <Row style={{ padding: 5, height: 90, backgroundColor: '#1f1e1e' }}>
-                      <Col>
-                          <Image
-                            style={[{ width: 50, height: 50 }, styles.img_center]}
-                            source={{uri: this.state.profile.ratingIcon}}
-                          />
-                          <Text style={[styles.text_white, styles.text_center]}>{this.state.profile.rating}</Text>
-                      </Col>
-                      <Col>
-                          <Text style={[styles.text_center, styles.secondary_text]}>Level</Text>
-                          <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.level}</Text>
-                      </Col>
-                      <Col>
-                          <Text style={[styles.text_center, styles.secondary_text]}>Prestige</Text>
-                          <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.prestige}</Text>
-                      </Col>
-                  </Row>
-                  <Row style={{ paddingTop: 20, paddingBottom: 20, height: 80, backgroundColor: '#1f1e1e' }}>
-                    <Col>
-                      <TouchableOpacity
-                        onPress={() => Actions.stats({quick: this.state.profile.quickPlayStats, competitive: this.state.profile.competitiveStats})}
-                        title="Submit"
-                        style={styles.submit}
-                      >
-                        <Text style={[styles.text_white, styles.text_center]}>Voir les statistiques complets</Text>
-                      </TouchableOpacity>
-                    </Col>
-                  </Row>
+                  {this.state.profile.error ? (
+                    <Row style={{ height: 200 }}>
+                        <Col>
+                            <Text style={[styles.text_white, styles.text_center, {paddingTop: 30, paddingBottom: 30, fontSize: 20}]}>This Battle Tag doesn't exist</Text>
+                            <TouchableOpacity
+                              onPress={() => Actions.home()}
+                              title="Submit"
+                              style={styles.submit}
+                            >
+                              <Text style={[styles.text_white, styles.text_center]}>Effectuer une autre recherche</Text>
+                            </TouchableOpacity>
+                        </Col>
+                    </Row>
+                  ) : (
+                    <React.Fragment>
+                      <Row style={{ height: 115 }}>
+                          <Col>
+                              <Image
+                                style={[{ width: 100, height: 100 }, styles.img_center]}
+                                source={{uri: this.state.profile.icon}}
+                              />
+                          </Col>
+                      </Row>
+                      <Text style={ styles.name_text }>{this.state.profile.name}</Text>
+                      <Row style={{ padding: 5, height: 90, backgroundColor: '#1f1e1e' }}>
+                          <Col>
+                              <Image
+                                style={[{ width: 50, height: 50 }, styles.img_center]}
+                                source={{uri: this.state.profile.ratingIcon}}
+                              />
+                              <Text style={[styles.text_white, styles.text_center]}>{this.state.profile.rating}</Text>
+                          </Col>
+                          <Col>
+                              <Text style={[styles.text_center, styles.secondary_text]}>Level</Text>
+                              <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.level}</Text>
+                          </Col>
+                          <Col>
+                              <Text style={[styles.text_center, styles.secondary_text]}>Prestige</Text>
+                              <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.prestige}</Text>
+                          </Col>
+                      </Row>
+                      <Row style={{ paddingTop: 20, paddingBottom: 20, height: 80, backgroundColor: '#1f1e1e' }}>
+                        <Col>
+                          <TouchableOpacity
+                            onPress={() => Actions.stats({quick: this.state.profile.quickPlayStats, competitive: this.state.profile.competitiveStats})}
+                            title="Submit"
+                            style={styles.submit}
+                          >
+                            <Text style={[styles.text_white, styles.text_center]}>Voir les statistiques complets</Text>
+                          </TouchableOpacity>
+                        </Col>
+                      </Row>
+                    </React.Fragment>
+                  )}
                 </React.Fragment>
             )}
             {this.state.loading && (
