@@ -9,75 +9,129 @@ import BackgroundImage from '../fragments/BackgroundImage';
 import Ability from '../fragments/Ability';
 
 import * as Api from '../services/api';
-import { _heroes } from '../services/content';
+import { heroes } from '../services/content';
 
 export default class HeroInfos extends React.Component {
 
   static get defaultProps() {
     return {
-      _hero: {},
+      hero: {},
     }
   }
 
   render() {
-    let { _hero } = this.props;
-    let hero = _heroes.dVa;
-    console.log({hero});
+    let { hero } = this.props;
     return (
       <BackgroundImage>
         <StatusBar barStyle="light-content" />
           <ScrollView style={styles.main_view}>
-            <Row style={{alignItems: 'center', height: 102, borderBottomWidth: 2, borderBottomColor: '#DFAA35', backgroundColor: '#1A1A1A', borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
+            <Row style={{alignItems: 'center', height: 102, borderBottomWidth: 2, borderBottomColor: hero.color, backgroundColor: hero.color, borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
               <Image
                 style={[{ width: 100, height: 100 }]}
                 source={{uri: hero.icon}}
               />
               <Text style={{ color: '#FFF', margin: 20, fontSize: 30, textTransform: 'capitalize' }}>{(hero.name).toUpperCase()}</Text>
             </Row>
-            <Text style={{ color: '#DFAA35', marginTop: 20, marginLeft: 20, fontSize: 20 }}>Overview</Text>
+            <Text style={{ color: hero.color, marginTop: 20, marginLeft: 20, fontSize: 20 }}>Overview</Text>
             <Text style={{ color: '#FFF', margin: 20, marginBottom: 30, fontSize: 13 }}>{hero.overview}</Text>
             <Ability
               color='#1A1A1A'
+              heroColor={hero.color}
               data={hero.weapon}
-              type="Weapon"
+              type="Weapons"
               showType={true}
               border={true}
             />
-            <Ability
-              color='#2A2A2A'
-              data={hero.passive}
-              type="Passive Ability"
-              showType={true}
-              border={true}
-            />
-            <Ability
-              color='#0A0A0A'
-              data={hero.ability1}
-              type="Abilities"
-              showType={true}
-              border={true}
-            />
-            <Ability
-              color='#0A0A0A'
-              data={hero.ability2}
-              type="Abilities"
-              showType={false}
-              border={false}
-            />
-            <Ability
-              color='#0A0A0A'
-              data={hero.ability3}
-              type="Abilities"
-              showType={false}
-              border={false}
-            />
-            <Ability
-              color='#2A2A2A'
-              data={hero.ultimate}
-              type="Ultimate Ability"
-              showType={true}
-              border={true}
-            />
+            {hero.weapon2 && (
+              <Ability
+                color='#1A1A1A'
+                heroColor={hero.color}
+                data={hero.weapon2}
+                type="Weapons"
+                showType={false}
+                border={false}
+              />
+            )}
+            {hero.passive && (
+              <Ability
+                color='#2A2A2A'
+                heroColor={hero.color}
+                data={hero.passive}
+                type="Passive Abilities"
+                showType={true}
+                border={true}
+              />
+            )}
+            {hero.passive2 && (
+              <Ability
+                color='#2A2A2A'
+                heroColor={hero.color}
+                data={hero.passive2}
+                type="Passive Abilities"
+                showType={false}
+                border={false}
+              />
+            )}
+            {hero.ability1 && (
+              <Ability
+                color='#0A0A0A'
+                heroColor={hero.color}
+                data={hero.ability1}
+                type="Abilities"
+                showType={true}
+                border={true}
+              />
+            )}
+            {hero.ability2 && (
+              <Ability
+                color='#0A0A0A'
+                heroColor={hero.color}
+                data={hero.ability2}
+                type="Abilities"
+                showType={false}
+                border={false}
+              />
+            )}
+            {hero.ability3 && (
+              <Ability
+                color='#0A0A0A'
+                heroColor={hero.color}
+                data={hero.ability3}
+                type="Abilities"
+                showType={false}
+                border={false}
+              />
+            )}
+            {hero.ability4 && (
+              <Ability
+                color='#0A0A0A'
+                heroColor={hero.color}
+                data={hero.ability4}
+                type="Abilities"
+                showType={false}
+                border={false}
+              />
+            )}
+            {hero.ultimate && (
+              <Ability
+                color='#2A2A2A'
+                heroColor={hero.color}
+                data={hero.ultimate}
+                type="Ultimate Abilities"
+                showType={true}
+                border={true}
+              />
+            )}
+            {hero.ultimate2 && (
+              <Ability
+                color='#2A2A2A'
+                heroColor={hero.color}
+                data={hero.ultimate2}
+                type="Ultimate Abilities"
+                showType={false}
+                border={false}
+              />
+            )}
           </ScrollView>
       </BackgroundImage>
     );
