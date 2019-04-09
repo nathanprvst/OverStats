@@ -1,10 +1,11 @@
 import React from 'react';
-import { Modal, TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
+import { Dimensions, ScrollView, FlatList, Modal, TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 import BackgroundImage from '../fragments/BackgroundImage';
 
+import { _heroes } from '../services/content';
 import * as Api from '../services/api';
 
 export default class Overview extends React.Component {
@@ -18,22 +19,31 @@ export default class Overview extends React.Component {
   state = {
     profile: null,
     loading: true,
+    heroes: [],
   }
 
   componentDidMount = async () => {
+    let heroes = [];
     let profile = await Api.getProfile(this.props.username);
+    for (let hero of Object.keys(_heroes)) {
+      heroes.push(_heroes[hero]);
+    }
     this.setState({
         profile: profile,
-        loading: false
+        loading: false,
+        heroes: heroes,
     });
   }
 
   render() {
     console.log(this.state.profile);
+    let { heroes } = this.state;
+    console.log({heroes});
+
     return (
       <BackgroundImage>
         <StatusBar barStyle="light-content" />
-        <View style={styles.main_view}>
+        <ScrollView style={styles.main_view}>
             {!this.state.loading && (
                 <React.Fragment>
                   {this.state.profile.error ? (
@@ -77,7 +87,7 @@ export default class Overview extends React.Component {
                               <Text style={[styles.text_white, styles.text_center, styles.text]}>{this.state.profile.prestige}</Text>
                           </Col>
                       </Row>
-                      <Row style={{ paddingTop: 20, paddingBottom: 20, height: 80, backgroundColor: '#1f1e1e' }}>
+                      <Row style={{ paddingTop: 20, paddingBottom: 20, height: 80, backgroundColor: '#1A1A1A' }}>
                         <Col>
                           <TouchableOpacity
                             onPress={() => Actions.stats({quick: this.state.profile.quickPlayStats, competitive: this.state.profile.competitiveStats})}
@@ -87,6 +97,27 @@ export default class Overview extends React.Component {
                             <Text style={[styles.text_white, styles.text_center]}>Voir les statistiques complets</Text>
                           </TouchableOpacity>
                         </Col>
+                      </Row>
+                      <Row style={{paddingTop: 10, paddingBottom: 30, backgroundColor: '#1A1A1A'}}>
+                        <FlatList
+                          data={heroes}
+                          showsVerticalScrollIndicator={false}
+                          numColumns={5}
+                          renderItem={({item}) =>
+                            <React.Fragment>
+                              <TouchableOpacity
+                                onPress={() => Actions.heroInfos({ hero: item })}
+                                style={{borderColor: '#FFF', borderWidth: 1}}
+                              >
+                                <Image
+                                  style={{width: (Dimensions.get('window').width - 50) / 5, height: (Dimensions.get('window').width - 50) / 5}}
+                                  source={{uri: item.icon}}
+                                />
+                              </TouchableOpacity>
+                            </React.Fragment>
+                          }
+                          keyExtractor={item => item.icon}
+                        />
                       </Row>
                     </React.Fragment>
                   )}
@@ -105,7 +136,7 @@ export default class Overview extends React.Component {
                 </View>
               </Modal>
             )}
-        </View>
+        </ScrollView>
       </BackgroundImage>
     );
   }
