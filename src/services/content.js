@@ -24,11 +24,45 @@ export const _heroes = {
     "color": '#815049',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/icon-portrait.png',
   },
+
+
   "dVa": {
     "name": 'dVa',
     "color": '#ED93C7',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/dva/icon-portrait.png',
+    "weapon": {
+      "name": 'Fusion Cannons',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/b/b9/Ability-dva1.png/100px-Ability-dva1.png?version=ac54689044c1ec52b2afcedb2de20e71',
+      "text": 'D.Va\'s mech is equipped with twin short-range rotating cannons. They lay down continuous, high-damage fire without needing to reload, but slow D.Va’s movement while they’re active.'
+    },
+    "passive": {
+      "name": "Eject",
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/b/b9/Ability-dva1.png/100px-Ability-dva1.png?version=ac54689044c1ec52b2afcedb2de20e71',
+      "text": 'Eject out of your mech when it\'s destroyed.'
+    },
+    "ability1": {
+      "name": "Defense Matrix",
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/3/3a/Ability-dva3.png/100px-Ability-dva3.png?version=d6a6ffcd9b2322a1e2cac505e212718a',
+      "text": 'D.Va can activate this forward-facing targeting array to shoot incoming projectiles out of the air.'
+    },
+    "ability2": {
+      "name": "Boosters",
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/5/59/Ability-dva2.png/100px-Ability-dva2.png?version=7d3d71366c2d0c0b84922053a616d526',
+      "text": 'D.Va’s mech launches into the air, her momentum carrying her forward. She can turn and change directions or barrel through her enemies, knocking them back.'
+    },
+    "ability3": {
+      "name": "Micro Missiles",
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/1/17/Ability-dva7.png/100px-Ability-dva7.png?version=ca7cdb9eee992aebdea5e9dd4d559dce',
+      "text": 'D.Va launches a volley of explosive rockets.'
+    },
+    "ultimate": {
+      "name": 'Self Destruct',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/4/44/Ability-dva4.png/100px-Ability-dva4.png?version=cccd452147ad7aa5ddd8b5339021f72b',
+      "text": 'D.Va ejects from her mech and sets its reactor to explode, dealing massive damage to nearby opponents.'
+    },
   },
+
+
   "genji": {
     "name": 'genji',
     "color": '#97EF43',
