@@ -8,6 +8,7 @@ import Header from './fragments/Header';
 import Home from './components/Home';
 import Overview from './components/Overview';
 import Stats from './components/Stats';
+import TopHeroes from './components/TopHeroes';
 
 export default class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ export default class App extends React.Component {
             renderTitle={Header}
             navigationBarStyle={styles.nav_bar}
             titleStyle={styles.title}
+            backButtonTintColor="#FFF"
             initial={true}
           />
           <Scene
@@ -33,6 +35,14 @@ export default class App extends React.Component {
           <Scene
             key="stats"
             component={Stats}
+            renderTitle={Header}
+            navigationBarStyle={styles.nav_bar}
+            backButtonTintColor="#FFF"
+            back
+          />
+          <Scene
+            key="topHeroes"
+            component={TopHeroes}
             renderTitle={Header}
             navigationBarStyle={styles.nav_bar}
             backButtonTintColor="#FFF"
