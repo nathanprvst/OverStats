@@ -23,6 +23,7 @@ export default class App extends React.Component {
             navigationBarStyle={styles.nav_bar}
             titleStyle={styles.title}
             backButtonTintColor="#FFF"
+            initial={true}
           />
           <Scene
             key="overview"
@@ -55,7 +56,6 @@ export default class App extends React.Component {
             navigationBarStyle={styles.nav_bar}
             backButtonTintColor="#FFF"
             back
-            initial={true}
           />
         </Stack>
       </Router>
