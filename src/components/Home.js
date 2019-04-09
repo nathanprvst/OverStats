@@ -23,13 +23,16 @@ export default class Home extends React.Component {
       <BackgroundImage>
         <StatusBar barStyle="light-content" />
         <View style={styles.main_view}>
+          <Text style={[styles.main_text, {paddingBottom: 20}]}>
+            Bienvenu sur Overstats, retrouvez les statistiques complets d'un joueur, en parties rapides et compétitives ainsi que de ses héros favoris.
+          </Text>
           <Text style={styles.form}>
               <Text style={styles.main_text}>
-                Renseigner le nom d’utilisateur d’un joueur
+                Renseigner votre battle tag (nomDuJoueur-xxxxx)
               </Text>
               <Text style={styles.second_text}> Overwatch </Text>
               <Text style={styles.main_text}>
-                pour voir ses statistiques. Remplissez son pseudo dans le champ ci-dessous :
+                pour voir vos statistiques. Remplissez le champ ci-dessous :
               </Text>
           </Text>
           <Formik
