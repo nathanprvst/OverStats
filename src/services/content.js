@@ -1,17 +1,13 @@
-export const _heroes = { //manque Wreaking_ball, Baptiste ?
+export const _heroes = {
   "ana": {
     "name": 'ana',
     "color": '#718AB3',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/ana/icon-portrait.png',
+    "overview": "Ana's versatile arsenal allows her to affect heroes all over the battlefield. Her Biotic Rifle rounds and Biotic Grenades heal allies and damage or impair enemies; her sidearm tranquilizes key targets, and Nano Boost gives one of her comrades a considerable increase in power.",
     "weapon": {
       "name": 'Biotic Rifle',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/f/fc/Ability-ana1.png?version=0e53182e13ba9a03b3e9a051d6078441',
       "text": 'Ana’s rifle shoots darts that can restore health to her allies or deal ongoing damage to her enemies. She can use the rifle’s scope to zoom in on targets and make highly accurate shots.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Sleep Dart',
@@ -23,31 +19,23 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/0/0c/Ability-ana3.png?version=ba9a0fa814527eac0282a5c18c0d5ffe',
       "text": 'Ana tosses a biotic bomb that deals damage to enemies and heals allies in a small area of effect. Affected allies briefly receive increased healing from all sources, while enemies caught in the blast cannot be healed for a few moments.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Nano Boost',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/9/97/Ability-ana4.png?version=966233d09f58f30b5a8333307732b7ad',
       "text": 'After Ana hits one of her allies with a combat boost, they deal more damage, take less damage from enemies’ attacks.'
     },
   },
-  // Second weapon
+
+
   "ashe": {
     "name": 'ashe',
     "color": '#676966',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/ashe/icon-portrait.png',
+    "overview": "Ashe quickly fires her rifle from the hip or uses her weapon’s aim-down sights to line up a high damage shot at the cost of fire-rate. She blasts enemies by throwing dynamite, and her coach gun packs enough punch to put some distance between her and her foes, or gain some air to leap to hard to reach places or for an aerial shot. And Ashe is not alone, as she can call on her omnic ally B.O.B. to join the fray when the need arises.",
     "weapon": {
       "name": 'The Viper',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/4/4e/Ability-ashe1.png?version=916fec8c5997f96a7d06affc386d804d',
       "text": 'Ashe\'s semi-automatic rifle fires quick shots.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Dynamite',
@@ -59,26 +47,61 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/8/85/Ability-ashe3.png?version=d03adba0120bb8a62c850edafef5c31c',
       "text": 'Ashe blasts enemies in front of her, knocking them away and propelling herself backward for added mobility.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'B.O.B.',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/7/7a/Ability-ashe4.png?version=f52f6bd4e92b8b3f6e85273fd593483e',
       "text": 'Ashe summons her trusted omnic sidekick, B.O.B., who charges forward and knocks enemies into the air, then lays down suppressing fire with his arm cannons.'
     },
   },
-  // 2 Combat mode - 1 Seoncdary fire
+
+
+  "baptiste": {
+    "name": 'baptiste',
+    "color": '#7C8F7B',
+    "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/f/fb/Icon-Baptiste.png/75px-Icon-Baptiste.png?version=b6163a2de71f3e79eb21df4ef4fcf43a',
+    "overview": "Baptiste wields an assortment of experimental devices and weaponry to keep allies alive and eliminate threats under fierce conditions. A battle-hardened combat medic, he is just as capable of saving lives as he is taking out the enemy.",
+    "weapon": {
+      "name": 'Biotic Launcher',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/2/26/Baptiste-ability1.png/100px-Baptiste-ability1.png?version=57cd947f03260a7ee371a4fc8b5b298a',
+      "text": 'Baptiste’s three-round-burst Biotic Launcher rewards accuracy and recoil control with significant damage output.'
+    },
+    "passive": {
+      "name": 'Exo Boost',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/e/e5/Baptiste-ability5.png/77px-Baptiste-ability5.png?version=6d96a78260cc22680e72c65e5e193adc',
+      "text": 'By first crouching, Baptiste can jump higher.'
+    },
+    "ability1": {
+      "name": 'Regenerative Burst',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/b/b3/Baptiste-ability2.png/100px-Baptiste-ability2.png?version=413bc917adff5393854c732a60a63840',
+      "text": 'Baptiste activates an intense regenerative burst that heals himself and nearby allies over time.'
+    },
+    "ability2": {
+      "name": 'Immortality Field',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/8/8d/Baptiste-ability3.png/100px-Baptiste-ability3.png?version=6e310f8340ff972018b5e4093a825c91',
+      "text": 'Baptiste uses a device to create a field that prevents allies from dying. The generator can be destroyed.'
+    },
+    "ultimate": {
+      "name": 'Amplification Matrix',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/2/2d/Baptiste-ability4.png/100px-Baptiste-ability4.png?version=5b6255a4054889d93697494730e40aa5',
+      "text": 'Baptiste creates a matrix that doubles the damage and healing effects of friendly projectiles that pass through it.'
+    },
+  },
+
+
   "bastion": {
-    "name": 'ana',
+    "name": 'bastion',
     "color": '#7C8F7B',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/icon-portrait.png',
+    "overview": "Repair protocols and the ability to transform between stationary Sentry, mobile Recon and devastating Tank configurations provide Bastion with a high damage output at the cost of mobility.",
     "weapon": {
-      "name": '',
-      "icon": '',
-      "text": ''
+      "name": 'Configuration: Recon',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/9/9a/Ability-bastion1.png/100px-Ability-bastion1.png?version=852ffc4cdad65f826a9a056d9ae43d6a',
+      "text": 'In Recon mode, Bastion is fully mobile, outfitted with a submachine gun that fires steady bursts of bullets at medium range.'
+    },
+    "weapon2": {
+      "name": 'Configuration: Sentry',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/f/fc/Ability-bastion2.png/100px-Ability-bastion2.png?version=16aaea61a6b226f3ec003c99c14345e2',
+      "text": 'In Sentry mode, Bastion is a stationary powerhouse equipped with a gatling gun capable of unleashing a hail of bullets. The gun\'s aim can be "walked" across multiple targets, dealing devastating damage at short to medium range.'
     },
     "passive": {
       "name": 'Ironclad',
@@ -91,14 +114,9 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "text": 'Bastion transforms between its two primary combat modes to adapt to battlefield conditions.'
     },
     "ability2": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
+      "name": 'Self-Repair',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/2/24/Ability-bastion4.png/100px-Ability-bastion4.png?version=3edbc65185e7b181e42f87d201c58f2f',
+      "text": 'Bastion restores its health; it cannot fire weapons while the repair process is in effect.'
     },
     "ultimate": {
       "name": 'Configuration: Tank',
@@ -106,11 +124,13 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "text": 'In Tank mode, Bastion extends wheeled treads and a powerful long-range cannon. The cannon’s explosive shells demolish targets in a wide blast radius, but Bastion can only remain in this mode for a limited time.'
     },
   },
-  // One ability more
+
+
   "brigitte": {
     "name": 'brigitte',
     "color": '#BE736E',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/brigitte/icon-portrait.png',
+    "overview": "Brigitte specializes in armor. She can throw Repair Packs to heal teammates, or automatically heal nearby allies when she damages foes with her Flail. Her Flail is capable of a wide swing to strike multiple targets, or a Whip Shot that stuns [sic] an enemy at range. When entering the fray, Barrier Shield provides personal defense while she attacks enemies with Shield Bash. Brigitte’s ultimate ability, Rally, gives her a substantial short-term boost of speed and provides long-lasting armor to all her nearby allies.",
     "weapon": {
       "name": 'Rocket Flail',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/2/21/Rocket_Flail.png?version=4788641ae586d80f7f0d3c534692f4b9',
@@ -136,6 +156,11 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/5/55/Barrier_Shield.png?version=a751995499df21974a770e1ab978dda2',
       "text": 'Brigitte deploys a frontal energy barrier to absorb a limited amount of damage.'
     },
+    "ability4": {
+      "name": 'Shield Bash',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/8/86/Shield_Bash.png/100px-Shield_Bash.png?version=592879ded2cb3b0f73e97e92ab50cd7d',
+      "text": 'Once her Barrier Shield is deployed, Brigitte can dash forward to stun an enemy.'
+    },
     "ultimate": {
       "name": 'Rally',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/0/07/Rally.png?version=02398f616cf13ce86f8a19c0ebe491b9',
@@ -143,10 +168,12 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "doomfist": {
     "name": 'doomfist',
     "color": '#815049',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/doomfist/icon-portrait.png',
+    "overview": "Doomfist’s cybernetics make him a highly-mobile, powerful frontline fighter. In addition to dealing ranged damage with his Hand Cannon, Doomfist can slam the ground, knock enemies into the air and off balance, or charge into the fray with his Rocket Punch. When facing a tightly packed group, Doomfist leaps out of view, then crashes down to earth with a spectacular Meteor Strike.",
     "weapon": {
       "name": 'Hand Cannon',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/b/bb/Hand_cannon.png?version=78942e9eded8fac0e7fd202b51189e0a',
@@ -183,11 +210,16 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     "name": 'dVa',
     "color": '#ED93C7',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/dva/icon-portrait.png',
-    "overview": "Orisa serves as the central anchor of her team, and defends her teammates from the frontline with a protective barrier. She can attack from long range, fortify her own defenses, launch graviton charges to slow and move enemies, and deploy a Supercharger to boost the damage output of multiple allies at once.",
+    "overview": "D.Va’s mech, Tokki is nimble and powerful — its twin Fusion Cannons blast away with autofire at short range, and she can use its Boosters to barrel over enemies and obstacles, or absorb attacks with her projectile-dismantling Defense Matrix.",
     "weapon": {
       "name": 'Fusion Cannons',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/b/b9/Ability-dva1.png/100px-Ability-dva1.png?version=ac54689044c1ec52b2afcedb2de20e71',
       "text": 'D.Va\'s mech is equipped with twin short-range rotating cannons. They lay down continuous, high-damage fire without needing to reload, but slow D.Va’s movement while they’re active.'
+    },
+    "weapon2": {
+      "name": 'Light Gun',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/0/09/Ability-dva5.png/100px-Ability-dva5.png?version=06807cd007cfa76dde727bb0e5cf05b6',
+      "text": 'While outside of her mech, D.Va can continue the fight with a mid-range automatic blaster.'
     },
     "passive": {
       "name": "Eject!",
@@ -214,12 +246,19 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/4/44/Ability-dva4.png/100px-Ability-dva4.png?version=cccd452147ad7aa5ddd8b5339021f72b',
       "text": 'D.Va ejects from her mech and sets its reactor to explode, dealing massive damage to nearby opponents.'
     },
+    "ultimate2": {
+      "name": 'Call Mech',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/f/f0/Ability-dva6.png/100px-Ability-dva6.png?version=a7c42787f80d251dc2256e0e7a9a8a09',
+      "text": 'If her armored battle suit is destroyed, D.Va can call down a fresh mech and return to the fray.'
+    },
   },
-  // Second weapon
+
+
   "genji": {
     "name": 'genji',
     "color": '#97EF43',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/genji/icon-portrait.png',
+    "overview": "Genji flings precise and deadly Shuriken at his targets, and uses his wakizashi to deflect projectiles or delivers a Swift Strike with his technologically-advanced \"dragonblade\" that cuts down enemies.",
     "weapon": {
       "name": 'Shuriken',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/2/28/Ability-genji1.png?version=8fbbf43f427b9a5d5f4ade87f4262e1f',
@@ -240,11 +279,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/7/70/Ability-genji2.png?version=6e64341f37239a9c81f63733ae6e9d1d',
       "text": 'With lightning-quick swipes of his wakizashi, Genji reflects an oncoming projectile and sends it rebounding towards his opponent.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Dragonblade',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/3/38/Ability-genji4.png?version=3e42a2b1535d69e4f34352defb671d24',
@@ -252,10 +286,12 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "hanzo": {
     "name": 'hanzo',
     "color": '#B9B48A',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/icon-portrait.png',
+    "overview": "Hanzo’s versatile arrows can reveal his enemies or rapid fire to strike multiple targets. He can scale walls to fire his bow from on high, or summon a titanic spirit dragon.",
     "weapon": {
       "name": 'Storm Bow',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/e/e3/Ability-hanzo1.png?version=c244a4820ffa175db24bf6a0a65353d4',
@@ -288,10 +324,12 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "junkrat": {
     "name": 'junkrat',
     "color": '#ECBD53',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/junkrat/icon-portrait.png',
+    "overview": "Junkrat’s area-denying armaments include a Frag Launcher that lobs bouncing grenades, Concussion Mines that send enemies flying, and Steel Traps that stop foes dead in their tracks.",
     "weapon": {
       "name": 'Frag Launcher',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/a/ab/Ability-Junkrat1.png?version=fc3cb2682995e4cbb31b57b0fdfda0ab',
@@ -312,11 +350,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/9/9c/Ability-Junkrat3.png?version=b3da99c16e5768f084e2476845532b07',
       "text": 'Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander too close to the trap, it clamps on, injuring and immobilizing them.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'RIP-Tire',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/3/32/Ability-Junkrat5.png?version=5cac861b6ad0784be4a4fbf3991a14f5',
@@ -324,10 +357,12 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "lucio": {
     "name": 'lucio',
     "color": '#85C952',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/icon-portrait.png',
+    "overview": "On the battlefield, Lúcio’s cutting-edge Sonic Amplifier buffets enemies with projectiles and knocks foes back with blasts of sound. His songs can both heal his team or boost their movement speed, and he can switch between tracks on the fly.",
     "weapon": {
       "name": 'Sonic Amplifier',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/b/b8/Ability-Lucio1.png?version=1729d95a365637d3d35e38ad8738455b',
@@ -359,20 +394,17 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "text": 'Protective waves radiate out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields.'
     },
   },
-  // Second weapon
+
+
   "mccree": {
     "name": 'mccree',
     "color": '#AE595C',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/mccree/icon-portrait.png',
+    "overview": "Armed with his Peacekeeper revolver, McCree takes out targets with deadeye precision and dives out of danger with eagle-like speed.",
     "weapon": {
       "name": 'Peacekeeper',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/0/08/Ability-mccree1.png?version=12bc0c5734dabdb0b2d03e248d4a8b3f',
       "text": 'McCree fires off a round from his trusty six-shooter.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Combat Roll',
@@ -384,31 +416,23 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/1/18/Ability-mccree3.png?version=c47d565a4359f1d013185473494a6df0',
       "text": 'McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Deadeye',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/6/68/Ability-mccree4.png?version=650b601e0e297ab70aaa78f669b71d3f',
       "text": 'Focus. Mark. Draw. McCree takes a few precious moments to aim; when he’s ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he’ll line up a killshot.'
     },
   },
-  // Second weapon
+
+
   "mei": {
     "name": 'mei',
     "color": '#6FACED',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/mei/icon-portrait.png',
+    "overview": "Mei’s weather-altering devices slow opponents and protect locations. Her Endothermic Blaster unleashes damaging icicles and frost streams, and she can Cryo-Freeze herself to guard against counterattacks, or obstruct the opposing team's movements with an Ice Wall.",
     "weapon": {
       "name": 'Endothermic Blaster',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/d/d8/Ability-mei1.png?version=ceb5ca557b73c9e329e6f1e4820489c8',
       "text": 'Mei’s blaster unleashes a concentrated, short-range stream of frost that damages, slows, and ultimately freezes enemies in place.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Cryo-Freeze',
@@ -420,31 +444,38 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/e/ea/Ability-mei3.png?version=465cbb5f110df8e13d48b9e5e1644157',
       "text": 'Mei generates an enormous ice wall that obstructs lines of sight, stops movement, and blocks attacks.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Blizzard',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/f/f0/Ability-mei4.png?version=72e56ced794b084217e4ed9a5350da43',
       "text": 'Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid.'
     },
   },
-  // One passive more - Second weapon
+
+
   "mercy": {
     "name": 'mercy',
     "color": '#EBE8BB',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/mercy/icon-portrait.png',
+    "overview": "Mercy’s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staff.",
     "weapon": {
       "name": 'Caduceus Staff',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/f/f4/Ability-mercy1.png?version=6bf39f67ec0fdc9630e7f16a3b182185',
       "text": 'Mercy engages one of two beams that connect to an ally. By maintaining the beams, she can either restore that ally’s health or increase the amount of damage they deal.'
     },
+    "weapon2": {
+      "name": 'Caduceus Blaster',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/4/48/Ability-mercy2.png/100px-Ability-mercy2.png?version=6034a2426bc725771fd5ccceeb3932c3',
+      "text": 'Mercy shoots a round from her sidearm. It\'s best reserved for emergency personal defense.'
+    },
     "passive": {
       "name": 'Regeneration',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/b/b0/Ability-passive.png?version=fcc50c8b5d44051a6a2291427fb86b8b',
       "text": 'Mercy automatically heals over time.'
+    },
+    "passive2": {
+      "name": 'Angelic Descent',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/e/e9/Ability-mercy4.png/100px-Ability-mercy4.png?version=765c048564cfb3cd685772cff0ef6fa1',
+      "text": 'Propelled by her Valkyrie suit, Mercy slows the speed of her descent from great heights.'
     },
     "ability1": {
       "name": 'Guardian Angel',
@@ -456,31 +487,28 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/3/3e/Ability-mercy5.png?version=7e0fe581e0e4485f5583c4f120ec5c2e',
       "text": 'Mercy brings a dead ally back into the fight with full health.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Valkyrie',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/f/f9/Ability-mercy6.png?version=a7f96516024c02602e6e9b831fe58f46',
       "text": 'Gain the ability to fly. Mercy’s abilities are enhanced.'
     },
   },
-  // Second weapon
+
+
   "moira": {
     "name": 'moira',
     "color": '#803C51',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/moira/icon-portrait.png',
+    "overview": "Moira’s biotic abilities enable her to contribute healing or damage in any crisis. While Biotic Grasp gives Moira short-range options, her Biotic Orbs contribute longer-range, hands-off damage and healing; she can also Fade to escape groups or remain close to allies in need of support. Once she’s charged Coalescence, Moira can save multiple allies from elimination at once or finish off weakened enemies.",
     "weapon": {
-      "name": 'Biotic Grasp',
+      "name": 'Biotic Grasp +',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/d/d7/Ability_Moira_Biotic_Grasp.png?version=dcaf06a74808eff1c984fc82d94c0eaa',
       "text": 'Using her left hand, Moira expends biotic energy to heal allies in front of her.'
     },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
+    "weapon2": {
+      "name": 'Biotic Grasp -',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/5/5f/Ability_Moira_Biotic_Grasp_Alt_fire.png/100px-Ability_Moira_Biotic_Grasp_Alt_fire.png?version=fd2aac6d9666e0de8986585e67f38d40',
+      "text": 'Her right hand fires a long-range beam weapon that saps enemies’ health, healing Moira and replenishing her biotic energy.'
     },
     "ability1": {
       "name": 'Biotic Orb',
@@ -492,11 +520,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/4/48/Ability_Moira_Fade.png?version=d4621c4df3eb4199c1ab1927413f62bb',
       "text": 'Moira\'s movement speed increases while making her invulnerable to damage.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Coalescence',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/0/05/Ability_Moira_Coalescence.png?version=8527f25cc46b2fcd53879f9e8a15e993',
@@ -504,22 +527,19 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "orisa": {
     "name": 'orisa',
     "color": '#468C43',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/orisa/icon-portrait.png',
+    "overview": "Orisa serves as the central anchor of her team, and defends her teammates from the frontline with a protective barrier. She can attack from long range, fortify her own defenses, launch graviton charges to slow and move enemies, and deploy a Supercharger to boost the damage output of multiple allies at once.",
     "weapon": {
       "name": 'Fusion Driver',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/4/4a/Ability_Orisa_Fusion_Driver.png?version=52a61d0a950a257b97ca8dc400d83ae1',
       "text": 'Orisa’s automatic projectile cannon delivers sustained damage, but slows her movement while she fires it.'
     },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ability1": {
-      "name": 'Halt!'',
+      "name": 'Halt!',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/2/22/Ability_Orisa_Halt%21.png?version=f0b17fed0f3e126d5db4a24836618b71',
       "text": 'Launch a graviton charge which can be detonated with the same action. The sphere slows and pulls nearby enemies to it.'
     },
@@ -540,10 +560,12 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "pharah": {
     "name": 'pharah',
     "color": '#3E7DCA',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/pharah/icon-portrait.png',
+    "overview": "Soaring through the air in her combat armor, and armed with a launcher that lays down high-explosive rockets, Pharah is a force to be reckoned with.",
     "weapon": {
       "name": 'Rocket Launcher',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/7/78/Ability-parah1.png?version=d4dc434e4338c874a4e72f829ec17676',
@@ -564,11 +586,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/c/ce/Ability-parah3.png?version=6f1b108f9d40428d6ed687702b92c9f3',
       "text": 'Pharah looses a wrist rocket that knocks back any enemies it strikes.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Barrage',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/8/8f/Ability-parah4.png?version=6e834d9de5fd0d4c6ebb51978f0ac0ca',
@@ -576,10 +593,12 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "reaper": {
     "name": 'reaper',
     "color": '#7D3E51',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/reaper/icon-portrait.png',
+    "overview": "Hellfire Shotguns, the ghostly ability to become immune to damage, and the power to step between shadows make Reaper one of the deadliest beings on Earth.",
     "weapon": {
       "name": 'Hellfire Shotguns',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/d/df/Ability-reaper1.png?version=55f7bf9728df09cec7895b47c72135ce',
@@ -600,11 +619,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/9/97/Ability-reaper3.png?version=5fbbd1a1754b2bcea2fbea31518014d2',
       "text": 'After marking a destination, Reaper disappears and reappears at that location.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Death Blossom',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/a/ac/Ability-reaper4.png?version=3bb8055be0e5694b4e5fcd5b39d5f163',
@@ -612,19 +626,16 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "reinhardt": {
     "name": 'reinhardt',
     "color": '#929DA3',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/reinhardt/icon-portrait.png',
+    "overview": "Clad in powered armor and swinging his hammer, Reinhardt leads a rocket-propelled charge across the battleground and defends his squadmates with a massive energy barrier.",
     "weapon": {
       "name": 'Rocket Hammer',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/c/c4/Ability-reinhardt1.png?version=163cdf2b6a9744dab97ff1741bd1e1cc',
       "text": 'Reinhardt’s Rocket Hammer is an exemplary melee weapon, able to deal punishing damage in a wide arc with every swing.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Barrier Field',
@@ -647,30 +658,22 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "text": 'Reinhardt forcefully slams his rocket hammer into the ground, knocking down and damaging all enemies in front of him.'
     },
   },
-  // Second weapon
+
+
   "roadhog": {
     "name": 'roadhog',
     "color": '#B68C52',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/roadhog/icon-portrait.png',
+    "overview": "Roadhog uses his signature Chain Hook to pull his enemies close before shredding them with blasts from his Scrap Gun. He’s hardy enough to withstand tremendous damage, and can recover his health with a short breather.",
     "weapon": {
       "name": 'Scrap Gun',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/f/f4/Ability-Roadhog1.png?version=9d0b059a8b45e559df4dfed7b2e9dc83',
       "text": 'Roadhog\'s Scrap Gun fires short-range blasts of shrapnel with a wide spread.'
     },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ability1": {
       "name": 'Take a Breather',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/a/a0/Ability-Roadhog2.png?version=4404eab3ad162b08c589e74de2733c4e',
       "text": 'Roadhog restores a chunk of his health over a brief period of time.'
-    },
-    "ability2": {
-      "name": 'Charge',
-      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/9/9f/Ability-reinhardt3.png?version=e03dac03a81726538ce9099483e13f94',
-      "text": 'Reinhardt charges forth in a straight line, grabbing hold of enemies in his path. If he collides with a wall, foes he’s carrying suffer extreme damage.'
     },
     "ability3": {
       "name": 'Chain Hook',
@@ -684,19 +687,16 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "soldier76": {
     "name": 'soldier-76',
     "color": '#697794',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/soldier-76/icon-portrait.png',
+    "overview": "Armed with cutting-edge weaponry, including an experimental pulse rifle that’s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior.",
     "weapon": {
       "name": 'Heavy Pulse Rifle',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/c/cc/Icon-ability.hpr.png?version=a1476d75af4ff03bde0efb4e2b68aec4',
       "text": 'Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Helix Rockets',
@@ -720,10 +720,12 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "sombra": {
     "name": 'sombra',
     "color": '#7359BA',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/sombra/icon-portrait.png',
+    "overview": "Stealth and debilitating attacks make Sombra a powerful infiltrator. Her hacking can disrupt her enemies, ensuring they're easier to take out, while her EMP provides the upper hand against multiple foes at once. Sombra’s ability to Translocate and camouflage herself makes her a hard target to pin down.",
     "weapon": {
       "name": 'Machine Pistol',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/a/a4/Ability_Sombra_Machine_Pistol.png?version=474b58cb0c009ace31c7f01a7806c679',
@@ -756,19 +758,16 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "symmetra": {
     "name": 'symmetra',
     "color": '#8EBCCC',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/symmetra/icon-portrait.png',
+    "overview": "Symmetra utilizes her light-bending Photon Projector to dispatch adversaries, shield her associates, construct teleportation pads and deploy particle-blasting Sentry Turrets.",
     "weapon": {
       "name": 'Photon Projector',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/7/7e/Ability-symmetra1.png?version=1a6f7f92898f5de2ae1b2afb4b446c8d',
       "text": 'Symmetra’s weapon emits a ranged beam. It deals continuous damage that increases the longer it is connected.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Sentry Turret',
@@ -780,31 +779,28 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/e/e0/Ability-symmetra4.png?version=1a1909ed6c0f0e2954933b51ee06bf46',
       "text": 'Symmetra places a temporary teleporter exit pad at a distance and connects it to a teleporter entry pad at her current location. Allies (and some of their abilities, such as Junkrat’s RIP-Tire) can travel from the entry pad to the exit pad instantly.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Photon Barrier',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/d/d7/Photon_Barrier.png?version=4524ddf52602ecea4d7212d6e40108cc',
       "text": 'Symmetra deploys a massive energy barrier which prevents ranged attacks and is big enough to cut through the entire map.'
     },
   },
-  // Second weapon - Third weapon
+
+
   "torbjorn": {
     "name": 'torbjorn',
     "color": '#C0726E',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/torbjorn/icon-portrait.png',
+    "overview": "Torbjörn’s extensive arsenal includes a rivet gun and hammer, as well as a personal forge that he can use to build turrets.",
     "weapon": {
       "name": 'Rivet Gun',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/b/b2/Ability-torbjorn1.png?version=21d5cacb2998f5ab3fe0ab4ea08e09f9',
       "text": 'Torbjörn fires rivets at long range.'
     },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
+    "weapon": {
+      "name": 'Forge Hammer',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/3/37/Ability-torbjorn2.png/100px-Ability-torbjorn2.png?version=a5fa67fe2d19b09808a921f48bf79412',
+      "text": 'This multipurpose hammer repairs turrets and, in a pinch, can also be used as a weapon.'
     },
     "ability1": {
       "name": 'Deploy Turret',
@@ -816,11 +812,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/a/af/Ability-torbjorn4.png?version=dd63fdb886885ba2ea43aa9f71f5444b',
       "text": 'Torbjörn gains additional armor as well as improved attack, movement, and reload speed for a brief period.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Molten Core',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/e/ef/Ability-torbjorn5.png?version=dafabf4c8e6721acefea2db406cb47f0',
@@ -828,19 +819,16 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "tracer": {
     "name": 'tracer',
     "color": '#D79342',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/tracer/icon-portrait.png',
+    "overview": "Toting twin pulse pistols, energy-based time bombs, and rapid-fire banter, Tracer is able to \"blink\" through space and rewind her personal timeline as she battles to right wrongs the world over.",
     "weapon": {
       "name": 'Pulse Pistols',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/f/ff/Ability-tracer1.png?version=0d52f1f48dc75ac72bdc568f3b1e7887',
       "text": 'Tracer rapid-fires both of her pistols.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Blink',
@@ -852,31 +840,23 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/6/63/Ability-tracer3.png?version=0a83d45705067399ea8b6402d7359c2f',
       "text": 'Tracer bounds backward in time, returning her health, ammo and position on the map to precisely where they were a few seconds before.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Pulse Bomb',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/a/af/Ability-tracer4.png?version=33d7dbc44b777d69da3adf5ed450b3cb',
       "text": 'Tracer lobs a large bomb that adheres to any surface or unfortunate opponent it lands on. After a brief delay, the bomb explodes, dealing high damage to all enemies within its blast radius.'
     },
   },
-  //Second weapon
+
+
   "widowmaker": {
     "name": 'widowmaker',
     "color": '#9E6AA8',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/widowmaker/icon-portrait.png',
+    "overview": "Widowmaker equips herself with whatever it takes to eliminate her targets, including mines that dispense poisonous gas, a visor that grants her squad infra-sight, and a powerful sniper rifle that can fire in fully-automatic mode.",
     "weapon": {
       "name": 'Widow\'s Kiss',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/b/bf/Ability-widowmaker1.png?version=f92ccb0b7d9cab4cbde8ad709d27d06a',
       "text": 'Widowmaker’s versatile sniper rifle is ideal for scope-aimed shots at distant targets.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Grappling Hook',
@@ -888,11 +868,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/0/08/Ability-widowmaker3.png?version=448b47d425fe2849e4d22a8f4f38b2f3',
       "text": 'Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering poison gas to any enemies in the vicinity.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Infra-Sight',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/9/94/Ability-widowmaker4.png?version=93ad65b2ffc5a5069c8aaf8e55f1786b',
@@ -900,19 +875,16 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
     },
   },
 
+
   "winston": {
     "name": 'winston',
     "color": '#A2A6BF',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/winston/icon-portrait.png',
+    "overview": "Winston wields impressive inventions—a jump pack, electricity-blasting Tesla Cannon, portable shield projector and more—with literal gorilla strength.",
     "weapon": {
       "name": 'Tesla Cannon',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/1/17/Ability-winston1.png?version=23bec3f59bf86c11586c9e830d4be5dd',
       "text": 'Winston’s weapon fires a short-range electric barrage for as long as he holds down the trigger.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Jump Pack',
@@ -924,22 +896,57 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/1/13/Ability-winston3.png?version=d6febe9cb82560b86805f72ec8d5815f',
       "text": 'Winston’s barrier projector extends a bubble-shaped field that absorbs damage until it\'s destroyed. Allies protected by the barrier can return fire from within it.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Primal Rage',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/1/10/Ability-winston4.png?version=955c61ecead521b5aaf0d23878d47219',
       "text": 'Winston embraces his animal nature, significantly boosting his health and making him very difficult to kill, strengthening his melee attack, and allowing him to use his Jump Pack ability more frequently. While raging, Winston can only make melee and Jump Pack attacks.'
     },
   },
-  // Second weapon
+
+
+  "wreckingBall": {
+    "name": 'Wrecking Ball',
+    "color": '#D79342',
+    "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/c/ca/Icon-Wrecking_Ball.png/75px-Icon-Wrecking_Ball.png?version=1a05d00fc83b28e955c6343fe086a800',
+    "overview": "Wrecking Ball rolls across the battlefield, using his arsenal of weapons and his mech’s powerful body to crush his enemies.",
+    "weapon": {
+      "name": 'Quad Cannons',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/9/92/Quad_cannons.png/100px-Quad_cannons.png?version=3ab33001f309abe0c43e3e659908907d',
+      "text": 'Wrecking Ball’s automatic assault cannons tear apart threats at medium range.'
+    },
+    "ability1": {
+      "name": 'Grappling Claw',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/f/fe/Grappling_claw.png/100px-Grappling_claw.png?version=580253468bbf0921934700d0ff4afc7b',
+      "text": 'Wrecking Ball launches a grappling claw, enabling him to anchor to an area and swing from it. If he strikes an enemy with a powered-up swing, they’re damaged and knocked back.'
+    },
+    "ability2": {
+      "name": 'Roll',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/1/15/Roll.png/100px-Roll.png?version=cdb446e19833300195e41df858b7b614',
+      "text": 'Wrecking Ball transforms into a ball, increasing his maximum movement speed.'
+    },
+    "ability3": {
+      "name": 'Adaptive Shield',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/9/94/Adaptive_shield.png/100px-Adaptive_shield.png?version=9072e837b9664d8cc59e4ed89b062542',
+      "text": 'Wrecking Ball’s temporary personal shields absorb damage, providing stronger defenses if more opponents are nearby.'
+    },
+    "ability4": {
+      "name": 'Piledriver',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/0/0b/Piledriver.png/100px-Piledriver.png?version=6aeae2ad7ac6774cd20be2dfc375f21f',
+      "text": 'Wrecking Ball slams onto the ground below, damaging enemies and launching them upward.'
+    },
+    "ultimate": {
+      "name": 'Minefield',
+      "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/thumb/3/32/Minefield.png/100px-Minefield.png?version=e934b16afb03bca76f12e7abcb9846b4',
+      "text": 'Wrecking Ball deploys a field of long-lasting proximity mines which explode on contact with enemies.'
+    },
+  },
+
+
   "zarya": {
     "name": 'zarya',
     "color": '#E77EB6',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/zarya/icon-portrait.png',
+    "overview": "Deploying powerful personal barriers that convert incoming damage into energy for her massive Particle Cannon, Zarya is an invaluable asset on the front lines of any battle.",
     "weapon": {
       "name": 'Particle Cannon',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/4/48/Ability-zarya1.png?version=3c51837fea6ec22b49fc8a0d5afd787d',
@@ -960,31 +967,23 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/9/9e/Ability-zarya3.png?version=7a751a71dec7729641223e411459cb04',
       "text": 'Zarya surrounds one of her teammates with an energy barrier that simultaneously absorbs fire and boosts the power of her Particle Cannon.'
     },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
-    },
     "ultimate": {
       "name": 'Graviton Surge',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/5/5d/Ability-zarya4.png?version=5a790cdf8a63e01d0d0d2cca8a88725a',
       "text": 'Zarya launches a gravity bomb that draws in enemy combatants and deals damage while they’re trapped.'
     },
   },
-  // Second weapon
+
+
   "zenyatta": {
     "name": 'zenyatta',
     "color": '#EDE582',
     "icon": 'https://d1u1mce87gyfbn.cloudfront.net/hero/zenyatta/icon-portrait.png',
+    "overview": "Zenyatta calls upon orbs of harmony and discord to heal his teammates and weaken his opponents, all while pursuing a transcendent state of immunity to damage.",
     "weapon": {
       "name": 'Orb of Destruction',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/d/d1/Ability-zenyatta1.png?version=b18fae91a23a51e8113d52be9fb8672f',
       "text": 'Zenyatta projects his destructive energy orbs individually.'
-    },
-    "passive": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ability1": {
       "name": 'Orb of Harmony',
@@ -995,11 +994,6 @@ export const _heroes = { //manque Wreaking_ball, Baptiste ?
       "name": 'Orb of Discord',
       "icon": 'https://gamepedia.cursecdn.com/overwatch_gamepedia/0/04/Ability-zenyatta3.png?version=10766a31fad2d8c8267fc78573dd1b9b',
       "text": 'Attaching the orb of discord to an opponent amplifies the amount of damage they receive for as long as Zenyatta maintains line of sight. Only one opponent can suffer the orb\'s effects at a time.'
-    },
-    "ability3": {
-      "name": '',
-      "icon": '',
-      "text": ''
     },
     "ultimate": {
       "name": 'Transcendence',
