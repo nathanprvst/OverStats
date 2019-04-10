@@ -1,5 +1,12 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import {
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Formik } from 'formik';
 

@@ -1,5 +1,13 @@
 import React from 'react';
-import { TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
+import {
+  TouchableOpacity,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+} from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import MaterialTabs from 'react-native-material-tabs';
 import { Actions } from 'react-native-router-flux';
@@ -28,8 +36,6 @@ export default class Stats extends React.Component {
   componentDidMount() {}
 
   render() {
-    console.log('quick : ', this.props.quick);
-    console.log('competitive : ', this.props.competitive);
     const { selectedTab } = this.state;
     const data = selectedTab === 0 ? this.props.competitive : this.props.quick;
 
@@ -133,16 +139,6 @@ const styles = StyleSheet.create({
     height: '100%',
     margin: 20
   },
-  grid: {
-    padding: 15,
-  },
-  name_text: {
-      color: '#DFAA35',
-      fontWeight: 'bold',
-      fontSize: 20,
-      marginBottom: 15,
-      textAlign: 'center',
-  },
   secondary_text: {
     fontSize: 16,
     color: '#DFAA35',
@@ -153,13 +149,6 @@ const styles = StyleSheet.create({
   },
   text_center: {
     textAlign: 'center',
-  },
-  text_left: {
-    textAlign: 'left',
-  },
-  img_center: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
   },
   text: {
       marginTop: 15,

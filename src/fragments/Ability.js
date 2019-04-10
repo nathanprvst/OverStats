@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
   },
   name: {
-    // color: '#DFAA35',
     fontSize: 20,
   },
   abilityType: {

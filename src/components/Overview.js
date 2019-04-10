@@ -1,5 +1,17 @@
 import React from 'react';
-import { Dimensions, ScrollView, FlatList, Modal, TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
+import {
+  Dimensions,
+  ScrollView,
+  FlatList,
+  Modal,
+  TouchableOpacity,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
@@ -36,9 +48,7 @@ export default class Overview extends React.Component {
   }
 
   render() {
-    console.log(this.state.profile);
     let { heroes } = this.state;
-    console.log({heroes});
 
     return (
       <BackgroundImage>
@@ -151,9 +161,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Gotham-Medium',
     height: '100%',
     margin: 20
-  },
-  grid: {
-    padding: 15,
   },
   name_text: {
       color: '#DFAA35',

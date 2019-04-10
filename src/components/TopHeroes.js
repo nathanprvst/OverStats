@@ -1,5 +1,14 @@
 import React from 'react';
-import { TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image, FlatList } from 'react-native';
+import {
+  TouchableOpacity,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+  FlatList,
+} from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import MaterialTabs from 'react-native-material-tabs';
 import { Actions } from 'react-native-router-flux';
@@ -25,31 +34,23 @@ export default class TopHeroes extends React.Component {
   heroesData = _heroes
 
   componentDidMount() {
-    // console.log(this.heroesData);
-    // console.log(this.props.topHeroes);
     let heroes = [];
     for (let hero of Object.keys(this.props.topHeroes)) {
-      // console.log(hero);
-      // console.log(this.heroesData[hero]);
       _.assign(this.props.topHeroes[hero], this.heroesData[hero]);
       let timePlayed = this.props.topHeroes[hero].timePlayed.split(':');
       let minutesInSeconds = parseInt(timePlayed[0]) * 60;
       let _timePlayedInSeconds = minutesInSeconds + parseInt(timePlayed[1]);
       _.assign(this.props.topHeroes[hero], {_timePlayedInSeconds});
-      // console.log(this.props.topHeroes[hero]);
       heroes.push(this.props.topHeroes[hero]);
     }
-    // console.log('teeest : ', heroes);
     let sortedHeroes = heroes.sort((a, b) => (a.timePlayed < b.timePlayed) ? 1 : ((b.timePlayed < a.timePlayed) ? -1 : 0));
     this.setState({heroes: sortedHeroes, loading: false});
   }
 
   getHeroPlayedTimeWidth(heroes, hero) {
-    console.log({heroes, hero});
     let totalWidth = heroes.reduce((a, b) => a + b._timePlayedInSeconds, 0);
     let heroWidth = hero._timePlayedInSeconds;
     let finalWidth = heroWidth / (totalWidth !== 0 ? totalWidth : 1) * 100;
-    console.log({totalWidth, heroWidth, finalWidth});
     return `${Math.round(finalWidth)}%`;
   }
 

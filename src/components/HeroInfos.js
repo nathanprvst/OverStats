@@ -1,5 +1,14 @@
 import React from 'react';
-import { ScrollView, TouchableOpacity, StatusBar, StyleSheet, Text, View, Button, Image } from 'react-native';
+import {
+  ScrollView,
+  TouchableOpacity,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+} from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import MaterialTabs from 'react-native-material-tabs';
 import { Actions } from 'react-native-router-flux';
@@ -147,44 +156,5 @@ const styles = StyleSheet.create({
     fontFamily: 'Gotham-Medium',
     height: '100%',
     margin: 20,
-  },
-  grid: {
-    padding: 15,
-  },
-  name_text: {
-      color: '#DFAA35',
-      fontWeight: 'bold',
-      fontSize: 20,
-      marginBottom: 15,
-      textAlign: 'center',
-  },
-  secondary_text: {
-    fontSize: 16,
-    color: '#DFAA35',
-    marginTop: 16,
-  },
-  text_white: {
-    color: '#FFF',
-  },
-  text_center: {
-    textAlign: 'center',
-  },
-  text_left: {
-    textAlign: 'left',
-  },
-  img_center: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-  text: {
-      marginTop: 15,
-  },
-  submit: {
-    backgroundColor: '#494949',
-    padding: 10,
-    borderRadius: 20,
-    fontSize: 12,
-    marginLeft: 20,
-    marginRight: 20,
   },
 });
